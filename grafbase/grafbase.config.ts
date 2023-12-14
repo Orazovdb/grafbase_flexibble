@@ -1,4 +1,6 @@
-import { config, g } from '@grafbase/sdk'
+import { config, graph } from '@grafbase/sdk'
+
+const g = graph.Standalone()
 
 const User = g.model('User', {
 	name: g.string().length({ min: 2, max: 20 }),
